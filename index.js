@@ -15,7 +15,10 @@ var lorem = new LoremIpsum({
   }
 });
 
-app.get('/', (req, res) => res.send(lorem.generateParagraphs(7)))
+app.get('/', (req, res) => res.json({
+  message: err.message,
+  error: err
+}))
 
 var ingredients = [{
     "id": "234kjw",
